@@ -1,9 +1,5 @@
 # Kithna?
 
-## Build
-
-Import and open project via Android Studio.
-
 ## Description
 
 Unless you’re a math savant, figuring out how much something costs after sales discount and tax can be difficult.
@@ -15,3 +11,7 @@ Fortunately, you have the Kithna app. Its simple yet beautiful UI allows you to 
 
 ![screenshot-02.png](./screenshot-02.png)
 > Quick next input field navigation
+
+## Build
+
+Import and open project via Android Studio.
