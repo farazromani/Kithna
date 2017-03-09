@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="#445868">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/result_textview"
+        android:gravity="center"
+        android:textSize="72sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:layout_above="@+id/original_price_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:id="@+id/original_price_layout"
+        android:layout_above="@+id/discount_amount_layout"
+        android:layout_centerHorizontal="true"
+        android:background="#00ACC1"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="$"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="48sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Original Price"
+                android:gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/original_price_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="48sp"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:id="@+id/discount_amount_layout"
+        android:layout_above="@+id/total_tax_layout"
+        android:layout_centerHorizontal="true"
+        android:background="#F37046">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/discount_type_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="48sp"
+                android:enabled="true"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap to Change"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:alpha=".50"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discount"
+                android:gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/total_discount_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="48sp"
+                android:singleLine="true"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/total_tax_layout"
+        android:background="#7CB342">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="%"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="48sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tax"
+                android:gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/total_tax_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="48sp"
+                android:singleLine="true"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
